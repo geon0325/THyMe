@@ -14,13 +14,15 @@ Source code for the paper [THyMe+: Temporal Hypergraph Motifs and Fast Algorithm
 g++ -O3 -std=c++11 main_(dp/thyme/thymeP).cpp -o run;
 ./run (dataset) (delta)
 ```
-* Results will be saved as *(dataset)_(delta)_(dp/thyme/thymeP).txt* in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
+* Results will be saved in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
 ```
+Filename: (dataset)_(delta)_(dp/thyme/thymeP).txt
+
 Runtime (sec.)
-1\t[# of instances of TH-motif 1]
-2 [# of instances of TH-motif 2]
+1   (# of instances of TH-motif 1)
+2   (# of instances of TH-motif 2)
 ...
-96 [# of instances of TH-motif 96]
+96  (# of instances of TH-motif 96)
 ```
 * You can run demo DP, THyMe, and THyMe+ by executing [run_dp.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_dp.sh), [run_thyme.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_thyme.sh), and [run_thymeP.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_thymeP.sh), respectively.
 
