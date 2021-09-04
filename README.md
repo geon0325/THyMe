@@ -9,7 +9,11 @@ Source code for the paper [THyMe+: Temporal Hypergraph Motifs and Fast Algorithm
 * The processed datasets (email-Enron & contact-primary) are available in [here](https://github.com/geonlee0325/THyMe/tree/main/data).
 
 ## How to Run
-* You can run DP, THyMe, and THyMe+ in [code](https://github.com/geonlee0325/THyMe/tree/main/code) by:
+* To run demos, execute following commend in [code](https://github.com/geonlee0325/THyMe/tree/main/code):
+```
+./run_(dp/thyme/thymeP).sh
+```
+* To run DP, THyMe, and THyMe+ with specified dataset and time interval (delta), execute following commends in [code](https://github.com/geonlee0325/THyMe/tree/main/code):
 ```
 g++ -O3 -std=c++11 main_(dp/thyme/thymeP).cpp -o run;
 ./run (dataset) (delta)
@@ -24,7 +28,6 @@ Runtime (sec.)
 ...
 96  (# of instances of TH-motif 96)
 ```
-* You can run demo DP, THyMe, and THyMe+ by executing [run_dp.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_dp.sh), [run_thyme.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_thyme.sh), and [run_thymeP.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_thymeP.sh), respectively.
 
 ## Contact Information
 If you have any questions, please contact [Geon Lee](https://geonlee0325.github.io/).
