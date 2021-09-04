@@ -102,19 +102,12 @@ int main(int argc, char *argv[])
 
 	// Configuration
 	string dataset = argv[1];
-	bool random_graph = bool(stoi(argv[2]));
-	double delta = stod(argv[3]);
+	double delta = stod(argv[2]);
 
 	// File path
-	string graphFile = "../data/" + dataset + "/" + dataset;
-	string writeFile = "../results/" + dataset + "_" + to_string(delta);
-	if (random_graph){
-		graphFile += "_random";
-		writeFile += "_random";
-	}
-	graphFile += ".txt";
-	writeFile += "_dp.txt";
-
+	string graphFile = "../data/" + dataset + "/" + dataset + ".txt";
+	string writeFile = "../results/" + dataset + "_" + to_string(delta) + "_dp.txt";
+	
 	// Read data
 	start = clock();
 	vector< vector<int> > node2hyperedge;
@@ -345,7 +338,6 @@ int main(int argc, char *argv[])
 		resultFile << i + 1 << "\t" << motif2count[i] << endl;
 		total_count += motif2count[i];
 	}
-	resultFile << total_count << endl;
 	resultFile.close();
 
 	cout << "Counting temporal h-motifs done: "
