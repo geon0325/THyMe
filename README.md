@@ -17,7 +17,7 @@ g++ -O3 -std=c++11 main_(dp/thyme/thymeP).cpp -o run;
 * Results will be saved as *(dataset)_(delta)_(dp/thyme/thymeP).txt* in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
 ```
 Runtime (sec.)
-1 [# of instances of TH-motif 1]
+1\t[# of instances of TH-motif 1]
 2 [# of instances of TH-motif 2]
 ...
 96 [# of instances of TH-motif 96]
