@@ -6,32 +6,23 @@ Source code for the paper [THyMe+: Temporal Hypergraph Motifs and Fast Algorithm
 
 ## Datasets
 * The original datasets are available [here](https://www.cs.cornell.edu/~arb/data/).
-* The processed datasets are available in [here](https://github.com/geonlee0325/THyMe/data).
+* The processed datasets (email-Enron & contact-primary) are available in [here](https://github.com/geonlee0325/THyMe/tree/main/data).
 
-## Running Demo
-* There are 10 different **runtype**s which can be set in [run.sh](https://github.com/geonlee0325/covid_segmentation/blob/main/code/run.sh):
-```setup
-1.  Fitting using LLD/NLLD (our segmentation scheme)
-2.  Fitting using LLD/NLLD (single segmentation)
-3.  Fitting using LLD/NLLD (incremental segmentation)
-4.  Forecasting using LLD/NLLD (our segmentation scheme)
-5.  Forecasting using LLD/NLLD (single segmentation)
-6.  Fitting with SIR (our segmentation scheme)
-7.  Fitting with SIR (single segmentation)
-8.  Fitting with SIR (incremental segmentation)
-9.  Forecasting with SIR (our segmentation scheme)
-10. Forecasting with SIR (single segmentation)
+## How to Run
+* You can run DP, THyMe, and THyMe+ in [code](https://github.com/geonlee0325/THyMe/tree/main/code) by:
 ```
-* For **runtype**s 1, 2, 3, 4, and 5, execute:
-```setup
-./run.sh [runtype] [country] [output directory] [LLD or NLLD] [latent dimension k] [error rate (only for runtype 3)]
-e.g., ./run.sh 1 japan ./ NLLD 3
+g++ -O3 -std=c++11 main_[dp/thyme/thymeP].cpp -o run;
+./run [dataset] [graph type (0=real/1=random)] [delta]
 ```
-* For **runtype**s 6, 7, 8, 9, and 10, execute:
-```setup
-./run.sh [runtype] [country] [output directory] [SIR] [error rate (only for runtype 8)]
-e.g., ./run.sh 6 japan ./ SIR
+* Results will be saved as *[dataset]_[delta]_[(random)]_[dp/thyme/thymeP].txt* in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
 ```
+Runtime (sec.)
+1 [# of instances of TH-motif 1]
+2 [# of instances of TH-motif 2]
+...
+96 [# of instances of TH-motif 96]
+```
+* You can run demo DP, THyMe, and THyMe+ by executing [run_dp.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_dp.sh), [run_thyme.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_thyme.sh), and [run_thymeP.sh](https://github.com/geonlee0325/THyMe/blob/main/code/run_thymeP.sh), respectively.
 
 ## Contact Information
 If you have any questions, please contact [Geon Lee](https://geonlee0325.github.io/).
