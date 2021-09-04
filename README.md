@@ -11,10 +11,10 @@ Source code for the paper [THyMe+: Temporal Hypergraph Motifs and Fast Algorithm
 ## How to Run
 * You can run DP, THyMe, and THyMe+ in [code](https://github.com/geonlee0325/THyMe/tree/main/code) by:
 ```
-g++ -O3 -std=c++11 main_[dp/thyme/thymeP].cpp -o run;
-./run [dataset] [graph type (0=real/1=random)] [delta]
+g++ -O3 -std=c++11 main_(dp/thyme/thymeP).cpp -o run;
+./run (dataset) (delta)
 ```
-* Results will be saved as *[dataset]_[delta]_[(random)]_[dp/thyme/thymeP].txt* in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
+* Results will be saved as *(dataset)_(delta)_(dp/thyme/thymeP).txt* in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
 ```
 Runtime (sec.)
 1 [# of instances of TH-motif 1]
