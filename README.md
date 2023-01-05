@@ -34,20 +34,21 @@ Runtime (sec.)
 ```
 ./run_(approx/approx+/approx++).sh
 ```
-* To run THyMe-A, THyMe-A+, and THyMe-A\* with specified dataset, time interval (delta), sampling time interval (T), and the number of samples (S), execute following commends in [code](https://github.com/geonlee0325/THyMe/tree/main/code):
+* To run THyMe-A, THyMe-A+, and THyMe-A\* with specified dataset, time interval (delta), sampling time interval ratio (T), and the number of samples (S), execute following commends in [code](https://github.com/geonlee0325/THyMe/tree/main/code):
 ```
 g++ -O3 -std=c++11 main_(approx/approx+/approx++).cpp -o run;
 ./run (dataset) (delta) (T) (S)
 ```
+* The sampling time interval is set to $T\cdot(T_{max}-T_{min})$ where $T_{min}$ and $T_{max}$ are the minimum and maximum timestamp of the entire dataset.
 * Results will be saved in [results](https://github.com/geonlee0325/THyMe/tree/main/results) as:
 ```
 Filename: (dataset)_(delta)_(S)_(T)_(approx/approx+/approx++).txt
 
 Runtime (sec.)
-1   (# of instances of TH-motif 1)
-2   (# of instances of TH-motif 2)
+1   (estimated # of instances of TH-motif 1)
+2   (estimated # of instances of TH-motif 2)
 ...
-96  (# of instances of TH-motif 96)
+96  (estimated # of instances of TH-motif 96)
 ```
 
 ## Contact Information
